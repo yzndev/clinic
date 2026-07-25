@@ -1,10 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Home from './pages/Home';
+
+// ساخت کلاینت React Query
+const queryClient = new QueryClient();
+
 function App() {
-  return (
-      <div className="flex h-screen items-center justify-center bg-blue-500">
-        <h1 className="text-4xl font-bold text-white">
-          this is a test message
-        </h1>
-      </div>
-  )
+    return (
+        <QueryClientProvider client={queryClient}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </BrowserRouter>
+        </QueryClientProvider>
+    );
 }
-export default App
+
+export default App;
