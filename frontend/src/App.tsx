@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Home from './pages/Home';
+import  AppointmentPage from './pages/Appointment';
 
-// ساخت کلاینت React Query
 const queryClient = new QueryClient();
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/appointment" element={< AppointmentPage />} />
                 </Routes>
             </BrowserRouter>
         </QueryClientProvider>
