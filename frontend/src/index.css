@@ -1,1 +1,8 @@
 @import "tailwindcss";
+body {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+@theme {
+    --font-sans: "Vazirmatn", sans-serif;
+}
