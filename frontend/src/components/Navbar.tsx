@@ -10,6 +10,7 @@ function Navbar() {
 
                 <nav className="space-x-6 text-gray-600 font-medium">
                     <Link to="/" className="hover:text-blue-600 transition">خانه</Link>
+                    <Link to="/doctors" className="hover:text-blue-600 transition">پزشکان</Link>
                     <Link to="/appointment" className="hover:text-blue-600 transition">رزرو نوبت</Link>
                 </nav>
             </div>

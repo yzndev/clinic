@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import api from '../api/axios';
 import type { Service } from '../types';
-
+import {Link} from "react-router-dom";
 const fetchServices = async (): Promise<Service[]> => {
     const response = await api.get('/services');
     return response.data;
@@ -26,10 +26,10 @@ function Home() {
 
             <main className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 {services?.map((service) => (
-                    <div key={service.id} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                    <Link to={`/services/${service.slug}`} key={service.id} className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition block">
                         <h2 className="text-2xl font-bold text-gray-800 mb-2">{service.title}</h2>
                         <p className="text-gray-600">{service.description}</p>
-                    </div>
+                    </Link>
                 ))}
             </main>
         </div>
