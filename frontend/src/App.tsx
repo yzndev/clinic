@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import AppointmentPage from './pages/Appointment';
 import Doctors from './pages/Doctors'; // جدید
 import ServiceDetail from './pages/ServiceDetail'; // جدید
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ function App() {
                         <Route path="appointment" element={<AppointmentPage />} />
                         <Route path="doctors" element={<Doctors />} />
                         <Route path="services/:slug" element={<ServiceDetail />} />
+                        <Route path="articles" element={<Articles />} />
+                        <Route path="articles/:slug" element={<ArticleDetail />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
